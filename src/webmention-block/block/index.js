@@ -6,7 +6,7 @@ import { registerBlockType } from '@wordpress/blocks';
 
 registerBlockType( 'tw2113/webmention-block', {
 	title: __( 'Webmention Block', 'indieweb-blocks' ),
-	icon: 'edit',
+	icon: 'admin-links',
 	category: 'common',
 	keywords: [
 		__( 'indieweb', 'indieweb-blocks' ),
