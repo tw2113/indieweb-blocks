@@ -1,5 +1,4 @@
 import {filterURLForDisplay} from '@wordpress/url';
-import {__} from '@wordpress/i18n';
 
 const Save = ( props ) => {
 	const {
