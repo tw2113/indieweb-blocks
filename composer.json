@@ -1,0 +1,15 @@
+{
+  "name": "tw2113/indiewebxyz-block",
+  "description": "A block to help post to Indieweb.xyz",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Michael Beckwith",
+      "email": "tw2113@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "webdevstudios/php-coding-standards": "^1.0"
+  }
+}
