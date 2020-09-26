@@ -10,6 +10,8 @@ registerBlockType( 'tw2113/webmention-block', {
 	category: 'common',
 	keywords: [
 		__( 'indieweb', 'indieweb-blocks' ),
+		__( 'webmention', 'indieweb-blocks' ),
+		__( 'web', 'indieweb-blocks' )
 	],
 	attributes: {
 		urlAddress: {
