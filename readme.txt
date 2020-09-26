@@ -9,8 +9,10 @@ Requires PHP: 5.6
 
 == Description ==
 
-Custom Post Type UI provides an easy to use interface for registering and managing custom post types and taxonomies for your website.
+Provides WordPress Blocks for various content needing added to posts to interact with IndieWeb technologies.
 
+* Block that provides a field to specify the URL to send a Webmention to
+* Block that provides ability to select a https://indieweb.xyz sub to post your permalink to.
 
 == Changelog ==
 
