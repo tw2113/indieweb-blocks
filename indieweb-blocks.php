@@ -76,5 +76,18 @@ function register_blocks() {
 		'editor_style'  => 'indieweb-blocks-editor-style',
 		'style'         => 'indieweb-blocks-style',
 	) );
+
+	register_block_type( 'tw2113/indiewebnews-block', array(
+		'editor_script' => 'indieweb-blocks-editor-script',
+		'editor_style'  => 'indieweb-blocks-editor-style',
+		'style'         => 'indieweb-blocks-style',
+	) );
 }
 add_action( 'init', __NAMESPACE__ . '\register_blocks' );
+
+function post_classes( $classes ) {
+	$classes[] = 'h-entry';
+
+	return $classes;
+}
+add_filter( 'post_class', __NAMESPACE__ . '\post_classes' );
