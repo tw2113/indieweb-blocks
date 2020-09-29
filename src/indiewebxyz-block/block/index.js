@@ -16,6 +16,11 @@ registerBlockType( 'tw2113/indiewebxyz-block', {
 			type: 'string',
 		}
 	},
+	example: {
+		attributes: {
+			xyzcategory: __('Accessibility', 'indieweb-blocks'),
+		},
+	},
 	edit,
 	save,
 } );

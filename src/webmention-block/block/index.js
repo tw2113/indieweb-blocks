@@ -18,6 +18,11 @@ registerBlockType( 'tw2113/webmention-block', {
 			type: 'string'
 		}
 	},
+	example: {
+		attributes: {
+			urlAddress: 'https://michaelbox.net',
+		},
+	},
 	edit,
 	save,
 } );

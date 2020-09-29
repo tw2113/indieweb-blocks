@@ -19,6 +19,12 @@ registerBlockType( 'tw2113/indiewebnews-block', {
 			type: 'string',
 		}
 	},
+	example: {
+		attributes: {
+			linktext: __('Shared on #IndieNews', 'indieweb-blocks'),
+			language: 'en',
+		},
+	},
 	edit,
 	save,
 } );
