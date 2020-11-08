@@ -15,7 +15,7 @@ const Save = ( props ) => {
 			{urlAddress && (
 				<p>This is in reply to <a href={urlAddress}
 				target="_blank"
-				rel="noreferrer noopener"
+				rel="noreferrer noopener in-reply-to"
 				className="u-in-reply-to"
 				>
 				{urlAddress}
