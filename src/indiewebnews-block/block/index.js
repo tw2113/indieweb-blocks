@@ -6,7 +6,7 @@ import { registerBlockType } from '@wordpress/blocks';
 
 registerBlockType( 'tw2113/indiewebnews-block', {
 	title: __( 'IndieNews Block', 'indieweb-blocks' ),
-	icon: 'admin-links',
+	icon: 'share-alt2',
 	category: 'common',
 	keywords: [
 		__( 'indieweb', 'indieweb-blocks' ),
