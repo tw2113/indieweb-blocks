@@ -8,8 +8,5 @@
       "email": "tw2113@gmail.com"
     }
   ],
-  "require": {},
-  "require-dev": {
-    "webdevstudios/php-coding-standards": "^1.0"
-  }
+  "require": {}
 }
