@@ -7,7 +7,8 @@ const Save = ( props ) => {
 		className
 	} = props;
 
-	let url = `https://news.indieweb.org/${language}`;
+	const url = `https://news.indieweb.org/${language}`;
+
 	return (
 		<div className={className}>
 			{linktext && (

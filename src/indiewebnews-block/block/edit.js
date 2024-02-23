@@ -11,33 +11,34 @@ const Edit = ( props ) => {
 		setAttributes,
 	} = props;
 
-	const saveSetting = (name, value) => {
-		setAttributes({
-			[name]: value,
-		});
+	const saveSetting = ( name, value ) => {
+		setAttributes( {
+			[ name ]: value,
+		} );
 	};
 
 	return (
 		<div className={className}>
 			<TextControl
-				label={__('IndieNews link text', 'indieweb-blocks')}
-				value={linktext || ''}
-				onChange={(value) => saveSetting('linktext', value)}
+				label={ __( 'IndieNews link text', 'indieweb-blocks' ) }
+				value={ linktext || '' }
+				onChange={ ( value ) => saveSetting( 'linktext', value ) }
 			/>
 
 			<SelectControl
-				label={__('IndieNews language to post to: ', 'indieweb-blocks')}
+				label={ __( 'IndieNews language to post to: ', 'indieweb-blocks' ) }
 				labelPosition="top"
 				value={language}
 				options={[
-					{label: "English", value: "en"},
-					{label: "Svenska", value: "sv"},
-					{label: "Deutsch", value: "de"},
-					{label: "Français", value: "fr"},
-					{label: "Nederlands", value: "nl"},
-					{label: "русский", value: "ru"},
+					{ label: "English", value: "en" },
+					{ label: "Svenska", value: "sv" },
+					{ label: "Deutsch", value: "de" },
+					{ label: "Français", value: "fr" },
+					{ label: "Nederlands", value: "nl" },
+					{ label: "русский", value: "ru" },
+					{ label: "Español", value: "es "}
 				]}
-				onChange={(value) => saveSetting('language', value)}
+				onChange={ ( value ) => saveSetting( 'language', value ) }
 			/>
 		</div>
 	);
