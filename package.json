@@ -2,7 +2,7 @@
 	"name": "indieweb-blocks",
 	"version": "0.0.2",
 	"description": "IndieWeb Blocks.",
-	"main": "src/index.js",
+	"main": "./src/index.js",
 	"scripts": {
 		"start": "wp-scripts start",
 		"dev": "wp-scripts start",
@@ -10,7 +10,6 @@
 		"build": "wp-scripts build",
 		"lint:css": "wp-scripts lint-style '**/*.scss' --verbose",
 		"lint:js": "wp-scripts lint-js",
-		"lint:php": "./vendor/bin/phpcs --standard=./.phpcs.xml.dist --extensions=php ./ --ignore='./build/*,./node_modules/*,./vendor/*'",
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "wp-scripts build && composer install"
 	},
@@ -33,11 +32,7 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^27.3.0",
-		"clean-webpack-plugin": "^4.0.0",
-		"css-loader": "^6.10.0",
-		"css-mqpacker": "^7.0.0",
 		"cssnano": "^6.0.4",
-		"ignore-emit-webpack-plugin": "^2.0.6",
 		"mini-css-extract-plugin": "^2.8.0",
 		"node-sass": "^9.0.0",
 		"sass-loader": "^14.1.1",
@@ -46,8 +41,7 @@
 	"eslintConfig": {
 		"extends": [
 			"plugin:@wordpress/eslint-plugin/esnext",
-			"plugin:@wordpress/eslint-plugin/react",
-			"@webdevstudios/js-coding-standards"
+			"plugin:@wordpress/eslint-plugin/react"
 		]
 	},
 	"stylelint": {
