@@ -42,28 +42,33 @@ function register_blocks() {
 		true
 	);
 
-	wp_register_style(
-		'indieweb-blocks-editor-style',
-		plugins_url( $editor_style, __FILE__ ),
-		[ 'wp-edit-blocks' ],
-		plugin_dir_path( __FILE__ ) . $editor_style
-	);
+	if ( file_exists( plugin_dir_path( __FILE__ ) . $editor_style ) ) {
+		wp_register_style(
+			'indieweb-blocks-editor-style',
+			plugins_url( $editor_style, __FILE__ ),
+			$asset_file['dependencies'],
+			$asset_file['version']
+		);
+	}
 
-	wp_register_style(
-		'indieweb-blocks-style',
-		plugins_url( $frontend_style, __FILE__ ),
-		[],
-		plugin_dir_path( __FILE__ ) . $frontend_style
-	);
+	if ( file_exists( plugin_dir_path( __FILE__ ) . $frontend_style ) ) {
+		wp_register_style(
+			'indieweb-blocks-style',
+			plugins_url( $frontend_style, __FILE__ ),
+			$asset_file['dependencies'],
+			$asset_file['version']
+		);
+	}
 
-
-	wp_enqueue_script(
-		'indiewebxyz-block-frontend-script',
-		plugins_url( $frontend_script, __FILE__ ),
-		$asset_file['dependencies'],
-		$asset_file['version'],
-		true
-	);
+	if ( file_exists( plugin_dir_path( __FILE__ ) . $frontend_script ) ) {
+		wp_enqueue_script(
+			'indiewebxyz-block-frontend-script',
+			plugins_url( $frontend_script, __FILE__ ),
+			$asset_file['dependencies'],
+			$asset_file['version'],
+			true
+		);
+	}
 
 	register_block_type( 'tw2113/indiewebxyz-block', array(
 		'editor_script' => 'indieweb-blocks-editor-script',
