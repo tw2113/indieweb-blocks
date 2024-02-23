@@ -1,4 +1,6 @@
-import {filterURLForDisplay} from '@wordpress/url';
+import { filterURLForDisplay } from '@wordpress/url';
+import { useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
 
 const Save = ( props ) => {
 	const {
@@ -8,19 +10,20 @@ const Save = ( props ) => {
 		className
 	} = props;
 
-	const displayUrl = filterURLForDisplay(urlAddress);
+	const displayUrl = urlAddress ? filterURLForDisplay( urlAddress ) : '';
+	const blockProps = useBlockProps.save();
 
 	return (
-		<div className={className}>
-			{urlAddress && (
-				<p>This is in reply to <a href={urlAddress}
+		<div { ...blockProps }>
+			{ urlAddress && (
+				<p>{ __( 'This is in reply to', 'indieweb-blocks' ) } <a href={urlAddress}
 				target="_blank"
 				rel="noreferrer noopener in-reply-to"
 				className="u-in-reply-to"
 				>
-				{urlAddress}
+				{ displayUrl }
 				</a></p>
-			)}
+			) }
 		</div>
 	);
 };
